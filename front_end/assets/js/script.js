@@ -85,7 +85,6 @@ function handleFormSubmit(e) {
             showAlert(id ? 'Gerecht is bewerkt' : 'Gerecht toegevoegd', 'success');
             resetForm();
             fetchDishes();
-            document.getElementById('form-wrapper').classList.add('hidden');
         })
         .catch(err => {
             console.error("Er ging iets mis:", err);

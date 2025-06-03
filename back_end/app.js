@@ -70,7 +70,7 @@ app.put("/updateDish/:id", async (req, res) => {
             cuisine,
             is_vegetarian
         });
-        
+
         res.status(200).json({ message: "Gerecht succesvol bijgewerkt" });
     } catch (error) {
         console.error("Update error:", error);
