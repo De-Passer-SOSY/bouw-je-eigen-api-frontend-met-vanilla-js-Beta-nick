@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<section class="layout">
+    <section id="alert" class="alert hidden"></section>
+
+<main class="dishespagina">
+    <header>
+        <h1>🍽️Dishes</h1>
+    </header>
+
+    <section class="form-section" id="form-layout">
+        <form id="dish-form">
+            <input type="hidden" id="dish-id">
+            <section class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+            </section>
+
+            <section class="form-group">
+                <label for="dish_type">Dish Type</label>
+                <input type="text" id="dish_type" required>
+            </section>
+
+            <section class="form-group">
+                <label for="cuisine">Cuisine</label>
+                <input type="text" id="cuisine" required>
+            </section>
+
+            <section class="form-group">
+                <label for="is_vegetarian">Is Vegetarian</label>
+                <input type="checkbox" id="is_vegetarian">
+            </section>
+
+            <button type="submit" class="save-button">Opslaan</button>
+        </form>
+    </section>
+
+    <section class="table-section" aria-label="Overzicht gerechten">
+        <table>
+            <thead>
+            <tr>
+                <th>Dish Name</th>
+                <th>Dish Type</th>
+                <th>Cuisine</th>
+                <th>Is Vegetarian</th>
+            </tr>
+            </thead>
+            <tbody id="dish-list"></tbody>
+        </table>
+    </section>
+</main>
+</section>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

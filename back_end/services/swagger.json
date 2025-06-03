@@ -1,0 +1,149 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Dishes API",
+    "version": "1.0.0",
+    "description": "Een API waar je gerechten kunt raadplegen"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3333"
+    }
+  ],
+  "paths": {
+    "/dishes": {
+      "get": {
+        "summary": "Toon alle gerechten",
+        "responses": {
+          "200": {
+            "description": "Lijst van gerechten"
+          }
+        }
+      }
+    },
+    "/dish/{id}": {
+      "get": {
+        "summary": "Toon één gerecht",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Gerecht gevonden"
+          },
+          "404": {
+            "description": "Niet gevonden"
+          }
+        }
+      }
+    },
+    "/newDish": {
+      "post": {
+        "summary": "Voeg een gerecht toe",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "dish_type": {
+                    "type": "string"
+                  },
+                  "cuisine": {
+                    "type": "string"
+                  },
+                  "is_vegetarian": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Gerecht toegevoegd"
+          }
+        }
+      }
+    },
+    "/updateDish/{id}": {
+      "put": {
+        "summary": "Wijzig een gerecht",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "dish_type": {
+                    "type": "string"
+                  },
+                  "cuisine": {
+                    "type": "string"
+                  },
+                  "is_vegetarian": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Gerecht bijgewerkt"
+          }
+        }
+      }
+    },
+    "/deleteDish/{id}": {
+      "delete": {
+        "summary": "Verwijder een gerecht",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Verwijderd"
+          },
+          "404": {
+            "description": "Niet gevonden"
+          }
+        }
+      }
+    }
+  }
+}

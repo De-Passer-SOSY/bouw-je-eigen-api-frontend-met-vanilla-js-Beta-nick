@@ -1,0 +1,122 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+.layout {
+    display: flex;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+button[class='save-button']{
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[class='save-button']:hover{
+    background-color: royalblue;
+}
+
+button[class='open-form-button']{
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: darkturquoise;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section[class='table-section']{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th{
+    background-color: lightgray;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid darkgrey;
+}
+
+th:first-child, td:last-child{
+    border-top-left-radius: 10px;
+}
+
+td{
+    padding: 10px;
+    border-bottom: 1px solid darkgray;
+}
+
+td button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap : 5px;
+}
+
+td button[class='edit-btn']{
+    background-color: orange;
+    color: black
+}
+
+td button[class='delete-btn']{
+    background-color: red;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.right-align {
+    display: block;
+    margin: 20px 0 20px auto;
+    text-align: right;
+}
+
+main{
+    border-radius : 10px;
+    box-shadow : 5px 5px 10px #000;
+    width: 75%;
+    justify-content: center;
+    margin : auto;
+    padding: 10px;
+}
+
+table{
+    width: 100%;
+}
+
+
+
